@@ -1,0 +1,43 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "outDir": "./dist/",// 打包到的目录
+      "sourceMap": true,// 是否生成sourceMap（用于浏览器调试）
+      "noImplicitAny": false,
+      /* 若有未使用的局部变量则抛错*/
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "declaration": true,// 是否生成声明文件
+      "declarationDir": "./dist/types/",// 声明文件打包的位置
+      "declarationMap": true,// 是否生成声明文件map文件（便于调试）
+      "moduleResolution": "node",
+      "module": "esnext",
+      "target": "es5",// 转化成的目标语言
+      "baseUrl": "./",
+      "experimentalDecorators" :true, // 装饰器
+      "types": [
+        "node"
+      ],
+      "typeRoots": [
+        "./node_modules/@types"
+      ],
+      "lib": [
+        "dom",
+        "es2015",
+        "es7",
+      ],
+      /* 在.tsx文件里支持JSX："React"或"Preserve"*/
+      "jsx": "react",
+      /* 指定生成目标为react JSX时，使用的JSX工厂函数，比如React.createElement或h*/
+      "jsxFactory": "React.createElement",
+      "allowJs": false
+    },
+    "include": [
+      "src/*.ts",
+      "src/*.tsx"
+    ],// 要打包的文件
+    "exclude": [
+      "node_modules",
+      "*.test.ts"
+    ]
+  }
